@@ -19,12 +19,12 @@ class SummaryApp(ctk.CTk):
         fitness_display.pack(pady=10)
 
         # Display the exercise schedule
-        schedule_label = ctk.CTkLabel(self, text="Scheduled Exercise Days", font=("Helvetica", 14))
-        schedule_label.pack(pady=10)
+        # schedule_label = ctk.CTkLabel(self, text="Scheduled Exercise Days", font=("Helvetica", 14))
+        # schedule_label.pack(pady=10)
 
         # Display the selected exercise days (if provided)
-        schedule_display = ctk.CTkLabel(self, text=selected_days if selected_days else "No days selected.", font=("Helvetica", 14))
-        schedule_display.pack(pady=10)
+        # schedule_display = ctk.CTkLabel(self, text=selected_days if selected_days else "No days selected.", font=("Helvetica", 14))
+        # schedule_display.pack(pady=10)
 
         # Add a close button for the summary window
         close_button = ctk.CTkButton(self, text="Close", command=self.quit, corner_radius=10)
@@ -53,8 +53,7 @@ if __name__ == "__main__":
     # Extract the schedule days passed from schedule.py
     if len(sys.argv) > 1:
         selected_days = sys.argv[1]
-    else:
-        selected_days = None
+    
 
     app = SummaryApp(selected_days)
     app.mainloop()
