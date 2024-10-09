@@ -1,3 +1,4 @@
 Fitness Level: Beginner
 
-Weight: 56.0 kg | Height: 1.45 m | BMI: 26.63 | Category: Overweight | Gender: Female | Age: 36 |
+Weight: 56.0 kg | Height: 1.45 m | BMI: 26.63 | Category: Overweight | Gender: Female | Age: 36 |Weight: 89.0 kg | Height: 1.96 m | BMI: 23.17 | Category: Normal weight | Gender: Male | Age: 35 |Fitness Level: Beginner
+

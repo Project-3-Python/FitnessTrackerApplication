@@ -138,13 +138,13 @@ class FitnessApp(ctk.CTk):
             # Show the result to the user
             messagebox.showinfo("BMI Result", f"Your BMI is {bmi:.2f} ({category})")
 
-            # Open schedule.py immediately after the message box
-            self.open_schedule()
+            # Open experience.py immediately after the message box
+            self.open_experience()
 
         except ValueError as e:
             messagebox.showerror("Input Error", f"Invalid input: {e}")
 
-    def open_schedule(self):
+    def open_experience(self):
         # Use subprocess to run schedule.py
         subprocess.Popen(['python', 'experience.py'])  # Adjust this line as needed for your environment
         self.quit()  # Close the current app
