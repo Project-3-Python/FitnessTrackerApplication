@@ -89,9 +89,7 @@ class FitnessApp(ctk.CTk):
         self.age_entry = ctk.CTkEntry(right_frame, placeholder_text="Age", corner_radius=10, width=300)
         self.age_entry.pack(pady=10)
 
-        info_label = ctk.CTkLabel(right_frame, text="You can add extra content here.", font=("Helvetica", 14))
-        info_label.pack(pady=10)
-
+       
               # Create the bottom frame (below left and right frames)
         bottom_frame = ctk.CTkFrame(self, fg_color="#FFCC70", border_color="#8DC6F3", border_width=2)
         bottom_frame.pack(side="bottom", fill="x", expand=True, padx=20, pady=10)
