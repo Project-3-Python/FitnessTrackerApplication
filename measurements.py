@@ -145,7 +145,7 @@ class FitnessApp(ctk.CTk):
             messagebox.showerror("Input Error", f"Invalid input: {e}")
 
     def open_experience(self):
-        # Use subprocess to run schedule.py
+        # Use subprocess to run experience.py
         subprocess.Popen(['python', 'experience.py'])  # Adjust this line as needed for your environment
         self.quit()  # Close the current app
 
