@@ -24,7 +24,7 @@ class ScheduleApp(ctk.CTk):
         top_frame.pack(side="top", fill="x", padx=20, pady=10)
 
         # Load and display the gym image
-        gym_image = Image.open("img/gym.jpg")  # Replace with your image path
+        gym_image = Image.open("img/schedule.jpg")  # Replace with your image path
         gym_image = gym_image.resize((1600, 300))  # Match the window width (800px)
         gym_photo = ImageTk.PhotoImage(gym_image)
         
