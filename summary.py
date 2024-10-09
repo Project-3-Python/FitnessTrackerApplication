@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import sys
+from PIL import Image, ImageTk
 
 class SummaryApp(ctk.CTk):
     def __init__(self, selected_days):
@@ -7,8 +8,21 @@ class SummaryApp(ctk.CTk):
         self.title("Summary")
         self.geometry("400x400")
 
+         # Create the top frame (above left and right frames)
+        top_frame = ctk.CTkFrame(self, border_width=2, height=100)
+        top_frame.pack(side="top", fill="x", padx=20, pady=10)
+
+        # Load and display the gym image
+        gym_image = Image.open("img/schedule.jpg")  # Replace with your image path
+        gym_image = gym_image.resize((1200, 350))  # Match the window width (800px)
+        gym_photo = ImageTk.PhotoImage(gym_image)
+        
+        image_label = ctk.CTkLabel(top_frame, image=gym_photo, text="")
+        image_label.image = gym_photo  # Keep a reference to prevent garbage collection
+        image_label.pack(side="left", fill="x", expand=True, padx=20)
+
         # Title Label
-        title_label = ctk.CTkLabel(self, text="Summary ", font=("Helvetica", 18))
+        title_label = ctk.CTkLabel(self, text="Here's your Summary ", font=("Helvetica", 18))
         title_label.pack(pady=10)
 
         # Load the last entry from the text file
@@ -53,7 +67,8 @@ if __name__ == "__main__":
     # Extract the schedule days passed from schedule.py
     if len(sys.argv) > 1:
         selected_days = sys.argv[1]
-    
+    else:
+        selected_days = None
 
     app = SummaryApp(selected_days)
     app.mainloop()
