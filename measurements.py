@@ -146,7 +146,7 @@ class FitnessApp(ctk.CTk):
 
     def open_schedule(self):
         # Use subprocess to run schedule.py
-        subprocess.Popen(['python', 'schedule.py'])  # Adjust this line as needed for your environment
+        subprocess.Popen(['python', 'experience.py'])  # Adjust this line as needed for your environment
         self.quit()  # Close the current app
 
     
